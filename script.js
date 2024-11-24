@@ -1,4 +1,4 @@
-const url = "http://127.0.0.1:5501/songs/";
+
 let songs = [];
 const prevBtn = document.querySelector(".prev ");
 const playBtn = document.querySelector(".play ");
@@ -22,9 +22,12 @@ let play = true;
 let nowSong = new Audio();
 let timeProgress,totalTime;
 
-getSongs();
-
-function getSongs() {
+let Album=["classical","others"]
+ for(let i=0;i<2;i++){
+getSongs(Album[i]);
+ }
+function getSongs(folder) {
+  const url =`http://127.0.0.1:5501/songs/${folder}/`;
   fetch(url)
     .then((response) => response.text()) // Await the text() Promise
     .then((data) => {
@@ -37,18 +40,18 @@ function getSongs() {
           songs.push(element.href);
         }
       }
-      createSongList();
+       createSongList(folder);
     })
     .catch((error) => {
       console.log(error); // Handle any errors here
     });
 }
 
-function createSongList() {
+function createSongList(folder) {
   for (let i = 0; i < songs.length; i++) {
     const li = document.createElement("li");
     songs[i] = songs[i].replaceAll("%20", " ");
-    let songName = songs[i].split("/songs/")[1];
+    let songName = songs[i].split(`/${folder}/`)[1];
     li.innerHTML = `
                 <div class="flex g-1">
                 <img class="music" src="./svgs/music.svg" />
@@ -58,18 +61,18 @@ function createSongList() {
                 </div>
                 </div>
                 <img class="invert"  src="./svgs/play.svg">`;
-    songListBox.appendChild(li);
-    const div = document.createElement("div");
-    div.innerHTML=` <div class="card">
-              <img
-                src="./svgs/musicCard.svg"
-              />
-              <img class="greenPlay" src="./svgs/playSub.svg" alt="" height="50px" width="50px">
-              <h2>${songName}</h2>
-              <p>Ayam</p>
-            </div>`
-     cardContainer.appendChild(div)       
+    songListBox.appendChild(li);     
   }
+  const div = document.createElement("div");
+  div.innerHTML=` <div class="card">
+            <img
+              src="./svgs/musicCard.svg"
+            />
+            <img class="greenPlay" src="./svgs/playSub.svg" alt="" height="50px" width="50px">
+            <h2>${folder}</h2>
+            <p>Ayam</p>
+          </div>`
+   cardContainer.appendChild(div)  
   findAllLis();
 }
 
