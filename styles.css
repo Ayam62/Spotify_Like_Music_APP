@@ -1,3 +1,7 @@
+:root{
+    --a:0;
+}
+
 *{
     margin:0;
     padding:0;
@@ -126,29 +130,35 @@ body{
 
 
 .card {
-
-    width:200px;
+    width:180px;
     background-color: #252525;
     padding: 10px;
     border-radius: 10px;
     gap:10px;
     position: relative;
+    transition: all 0.5s;
 }
+
 .card img{
     width: 100%;
     border-radius: 10px;
   
 }
-.card svg{
+.card .greenPlay{
     background-color: green;
-    width:40px;
+    width: 48px;
     border-radius: 50%;
     padding: 10px;
     position: absolute;
-    bottom: 82px;
-    right:15px;
-    opacity:0;
-    transition: all 0.1s ease-out
+    bottom: 119px;
+    right: 15px;
+    opacity: 0;
+    transition: all 0.1s ease-out;
+}
+.card:hover{
+    cursor: pointer;
+    background-color: black;
+    --a:1;
 }
 .playbar{
     position: fixed;
@@ -170,6 +180,8 @@ body{
     align-items: center;
     gap: 12px;
     cursor: pointer;
+    position: absolute;
+
 }
 .prev{
     width:30px;
@@ -236,7 +248,9 @@ body{
 .songtime{
     color: black;
     position: absolute;
-    right: 23px;
+    right: 200px;
+
+    
 }
 .close{
     position: absolute;
@@ -247,7 +261,12 @@ body{
 .card h2{
     word-break: break-word; 
 }
-
+.volume{
+    display: flex;
+    width: 100px;
+    position: absolute;
+    right: 23px;
+}
 
 @media (max-width: 1000px) {
     .left{
@@ -289,7 +308,7 @@ body{
         display: none;
     }
     .card{
-        width: 90vw;
+        width: 40vw;
     }
     .playbar{
         flex-direction: column;
@@ -303,4 +322,9 @@ body{
     }
 
   }
-  
+  @media (max-width: 400px){
+    .card{
+      width: 73vw;
+    }
+
+  }

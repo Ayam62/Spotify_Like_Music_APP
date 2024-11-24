@@ -64,6 +64,7 @@ function createSongList() {
               <img
                 src="./svgs/musicCard.svg"
               />
+              <img class="greenPlay" src="./svgs/playSub.svg" alt="" height="50px" width="50px">
               <h2>${songName}</h2>
               <p>Ayam</p>
             </div>`
