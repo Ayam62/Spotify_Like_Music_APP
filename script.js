@@ -23,9 +23,9 @@ let nowSong = new Audio();
 let timeProgress,totalTime;
 
 let Album=["classical","others"]
- for(let i=0;i<2;i++){
-getSongs(Album[i]);
- }
+//  for(let i=0;i<2;i++){
+getSongs("others");
+//  }
 function getSongs(folder) {
   const url =`http://127.0.0.1:5501/songs/${folder}/`;
   fetch(url)
