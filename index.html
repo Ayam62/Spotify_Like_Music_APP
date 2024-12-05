@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./utility.css" />
+  </head>
+
+  <body>
+    <div class="container flex bg-black">
+      <div class="left border">
+        <div class="home bg-gray rounded m-1 p-1">
+          <div class="logo">
+            <img src="./svgs/logo.svg" alt="logo" class="invert" />
+          </div>
+          <ul>
+            <li><img src="./svgs/home.svg" class="invert" /> Home</li>
+            <li><img src="./svgs/search.svg" class="invert" />Search</li>
+          </ul>
+          <div class="close"><img src="./svgs/closeIcon.svg" alt=""></div>
+        </div>
+       
+        <div class="library bg-black bg-gray rounded m-1 p-1">
+          <div class="heading">
+            <img src="./svgs/library.svg" class="invert" />
+            <h2>Your Library</h2>
+          </div>
+          <div class="song-list">
+            <ul>
+            </ul>
+          </div>
+          <div class="footer">
+            <div>
+              <a href="https://www.spotify.com/np-en/legal/" id=""
+                ><span>Legal</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/np-en/safetyandprivacy/" id=""
+                ><span>Safety &amp; Privacy Center</span></a
+              >
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/np-en/legal/privacy-policy/"
+                id=""
+                ><span>Privacy Policy</span></a
+              >
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/np-en/legal/cookies-policy/"
+                id=""
+                ><span>Cookies</span></a
+              >
+            </div>
+            <div>
+              <a
+                href="https://www.spotify.com/np-en/legal/privacy-policy/#s3"
+                id=""
+                ><span>About Ads</span></a
+              >
+            </div>
+            <div>
+              <a href="https://www.spotify.com/np-en/accessibility/" id=""
+                ><span>Accessibility</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right border">
+        <div class="header">
+          <div class="nav">
+            <div class="hamBurger">
+              <img src="./svgs/hamBurger.svg" alt="">
+            </div>
+            <svg
+
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="15 18 9 12 15 6"></polyline>
+            </svg>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </div>
+          <div class="buttons">
+            <button class="sign-in">Sign Up</button>
+            <button class="login">Login</button>
+          </div>
+        </div>
+
+        <div class="main rounded">
+          <div class="spotify-playlist">
+            <h3>Spotify Playlist</h3>
+            <p>Show all</p>
+          </div>
+          <div class="cardContainer">
+            <div class="card">
+              <img
+                aria-hidden="false"
+                draggable="false"
+                loading="lazy"
+                src="https://i.scdn.co/image/ab67706f000000020408713c731caaf1f800615a"
+                data-testid="card-image"
+                alt=""
+                class="mMx2LUixlnN_Fu45JpFB yMQTWVwLJ5bV8VGiaqU3 Yn2Ei5QZn19gria6LjZj"
+              />
+              <img class="greenPlay" src="./svgs/playSub.svg" alt="" height="50px" width="50px">
+              <h2>Happy Hits!</h2>
+              <p>Hits to boost your mood and fill you with happiness</p>
+            </div>
+          <div class="playbar">
+            <div class="seekbar">
+              <div class="circle"></div>
+            </div>
+            <div class="songinfo "></div>
+            <div class="song-btns">
+              <img class="prev" src="./svgs/leftArrow.svg">
+              <img class="play" src="./svgs/play.svg">
+              <img class="next"  src="./svgs/rightArr.svg">
+            </div>
+            <div class="songtime"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
